@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Matcha &amp; Mingle · Wellness, Reimagined</title>
+<meta name="description" content="Matcha & Mingle is a modern wellness event series: wellness activations, art exhibits, healthy tastings, and live DJ sets. Presented by the Plus 1 Social App. August 1, 2026 at Arena Wynwood, Miami. Join the list." />
+<link rel="canonical" href="https://matchaandmingle.com/" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Matcha & Mingle · Wellness, Reimagined" />
+<meta property="og:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. August 1, 2026 at Arena Wynwood, Miami." />
+<meta property="og:url" content="https://matchaandmingle.com/" />
+<meta property="og:image" content="https://matchaandmingle.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:alt" content="Matcha & Mingle · Sip, breathe, mingle. August 1, 2026 · Arena Wynwood, Miami." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Matcha & Mingle · Wellness, Reimagined" />
+<meta name="twitter:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. August 1, 2026 at Arena Wynwood, Miami." />
+<meta name="twitter:image" content="https://matchaandmingle.com/og-image.png" />
+
+<!-- Logo favicon -->
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --matcha:#5b7c5a;
+    --matcha-deep:#3f5b3e;
+    --matcha-bright:#7fa05c;
+    --sage:#a7bea0;
+    --cream:#f6f2e7;
+    --cream-deep:#efe8d6;
+    --ink:#2a3327;
+    --ink-soft:#586353;
+    --white:#fffdf8;
+    --radius:22px;
+    --shadow:0 20px 50px -24px rgba(63,91,62,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin-inline:auto}
+  .eyebrow{
+    font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:600;color:var(--matcha);
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0;
+    transition:background .3s ease, box-shadow .3s ease, padding .3s ease;
+  }
+  nav.scrolled{
+    background:rgba(246,242,231,.82);
+    backdrop-filter:blur(12px);
+    box-shadow:0 1px 0 rgba(63,91,62,.08);
+    padding:12px 0;
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;width:min(1120px,92vw)}
+  .brand{display:inline-flex;flex-direction:column;align-items:center;gap:.45rem;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--matcha-deep)}
+  .brand-logo{height:88px;width:auto;display:block}
+  .brand-logo--light{height:80px}
+  .brand-tag{font-family:'Inter',sans-serif;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--matcha);font-weight:600;white-space:nowrap}
+  .brand-tag--light{color:#d4e0c9}
+  @media(max-width:760px){.brand-logo{height:64px}.brand-tag{font-size:.66rem;letter-spacing:.14em}}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-size:.92rem;font-weight:500;color:var(--ink-soft);transition:color .2s}
+  .nav-links a:hover{color:var(--matcha-deep)}
+  .btn{
+    display:inline-block;background:var(--matcha-deep);color:var(--cream);
+    padding:.7rem 1.4rem;border-radius:100px;font-weight:600;font-size:.92rem;
+    transition:transform .2s ease, background .2s ease;border:none;cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-2px);background:var(--matcha)}
+  .nav-cta{display:none}
+  @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    padding:120px 0 80px;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 80% 10%, rgba(127,160,92,.28), transparent 55%),
+      radial-gradient(100% 80% at 10% 90%, rgba(167,190,160,.35), transparent 50%),
+      var(--cream);
+  }
+  .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0}
+  .blob.a{width:480px;height:480px;background:var(--sage);top:-120px;right:-80px;animation:float 16s ease-in-out infinite}
+  .blob.b{width:380px;height:380px;background:var(--matcha-bright);bottom:-140px;left:-100px;animation:float 20s ease-in-out infinite reverse}
+  @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-30px)}}
+  .hero .wrap{position:relative;z-index:2;max-width:860px;text-align:center}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:.5rem;background:var(--white);
+    border:1px solid var(--cream-deep);padding:.5rem 1rem;border-radius:100px;
+    font-size:.82rem;font-weight:600;color:var(--matcha-deep);box-shadow:var(--shadow);
+    margin-bottom:1.8rem;
+  }
+  .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--matcha-bright);box-shadow:0 0 0 4px rgba(127,160,92,.25)}
+  .hero h1{font-size:clamp(3rem,8vw,5.6rem);margin-bottom:1.4rem}
+  .hero h1 em{font-style:italic;color:var(--matcha)}
+  .hero p.lede{font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--ink-soft);max-width:600px;margin:0 auto 2.4rem}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+  .btn.big{padding:1rem 2rem;font-size:1rem}
+  .btn.ghost{background:transparent;color:var(--matcha-deep);border:1.5px solid var(--sage)}
+  .btn.ghost:hover{background:var(--white)}
+  .hero-form{display:flex;justify-content:center;gap:.7rem;max-width:520px;flex-wrap:wrap;margin:0 auto 1.2rem}
+  .hero-form input[type=email]{box-shadow:var(--shadow)}
+  .hero-link{display:inline-block;font-weight:600;color:var(--matcha-deep);font-size:.95rem;transition:color .2s}
+  .hero-link:hover{color:var(--matcha)}
+  .presented{margin-top:3rem;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.7rem;font-size:.9rem;color:var(--ink-soft)}
+  .presented strong{font-family:'Fraunces',serif;color:var(--matcha-deep);font-weight:600}
+  .plusone-mark{display:inline-flex;align-items:center;gap:.4rem;background:var(--matcha-deep);color:var(--cream);padding:.35rem .8rem;border-radius:8px;font-weight:600;font-size:.85rem}
+  .btn.download{background:var(--matcha-bright);color:var(--ink);padding:.5rem 1.1rem;font-size:.85rem;box-shadow:0 8px 20px -8px rgba(127,160,92,.7)}
+  .btn.download:hover{background:var(--matcha);color:var(--cream)}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:96px 0}
+  .section-head{max-width:620px;margin-bottom:3.5rem}
+  .section-head h2{font-size:clamp(2rem,5vw,3.2rem);margin:.8rem 0 1rem}
+  .section-head p{color:var(--ink-soft);font-size:1.08rem}
+
+  /* ---------- EXPERIENCE GRID ---------- */
+  .experience{background:var(--white)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.3rem}
+  .card{
+    background:var(--cream);border:1px solid var(--cream-deep);border-radius:var(--radius);
+    padding:2rem 1.7rem;transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .card .ico{
+    width:54px;height:54px;border-radius:16px;display:grid;place-items:center;
+    font-size:1.6rem;background:linear-gradient(135deg,var(--sage),var(--matcha-bright));
+    margin-bottom:1.2rem;
+  }
+  .card h3{font-size:1.3rem;margin-bottom:.5rem;color:var(--matcha-deep)}
+  .card p{color:var(--ink-soft);font-size:.96rem}
+
+  /* ---------- PARTNERS ---------- */
+  .partners{background:var(--cream)}
+  .partners .card{background:var(--white)}
+  .logo-tile{height:88px;border-radius:14px;display:flex;align-items:center;justify-content:center;padding:14px 20px;margin-bottom:1.3rem;overflow:hidden}
+  .logo-tile img{max-height:100%;max-width:100%;object-fit:contain;display:block}
+  .partner-name{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--matcha);margin-bottom:.4rem}
+  a.card{display:block}
+  a.card .partner-name::after{content:" ↗";color:var(--matcha-bright);font-weight:700}
+  a.card:hover .partner-name{color:var(--matcha-deep)}
+  .venue-logo{height:48px;width:auto;display:block;margin:.5rem 0 .2rem}
+  .hero-cta{margin-bottom:1rem}
+  .venue-link{color:inherit;text-decoration:underline;text-underline-offset:2px}
+  .venue-link:hover{color:var(--matcha-deep)}
+
+  /* ---------- TICKETS ---------- */
+  .tickets{background:var(--cream)}
+  .tickets-card{
+    background:var(--white);border:1px solid var(--cream-deep);border-radius:32px;
+    padding:clamp(2.5rem,5vw,3.5rem);display:flex;flex-wrap:wrap;gap:2.5rem;
+    align-items:center;justify-content:space-between;box-shadow:var(--shadow);
+  }
+  .tickets-info{flex:1;min-width:280px}
+  .tickets-info h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--matcha-deep);margin:.6rem 0 1.3rem}
+  .includes{list-style:none;display:grid;gap:.75rem}
+  .includes li{position:relative;padding-left:1.9rem;color:var(--ink-soft);font-size:1.04rem}
+  .includes li::before{content:"✓";position:absolute;left:0;top:-1px;color:var(--matcha-bright);font-weight:700;font-size:1.1rem}
+  .venue-note{margin-top:1.4rem;font-weight:600;color:var(--matcha-deep);font-size:.95rem}
+  .tickets-price{
+    flex:0 0 auto;width:min(330px,100%);text-align:center;
+    background:linear-gradient(160deg,var(--cream),var(--cream-deep));
+    border-radius:24px;padding:2.2rem 1.8rem;
+  }
+  .price{font-family:'Fraunces',serif;font-size:4.6rem;font-weight:600;color:var(--matcha-deep);line-height:1}
+  .price .cur{font-size:2.1rem;vertical-align:super;margin-right:.05rem}
+  .price-sub{color:var(--ink-soft);margin:.4rem 0 1.5rem;font-size:.92rem}
+  .ticket-btn{display:block;width:100%;margin-bottom:.7rem}
+  .soon-pill{display:block;background:var(--matcha-deep);color:var(--cream);padding:.95rem 1rem;border-radius:100px;font-weight:600;font-size:1rem;margin-bottom:.7rem}
+  .ghost-ticket{background:var(--white);color:var(--matcha-deep);border:1.5px solid var(--sage)}
+  .ghost-ticket:hover{background:var(--cream)}
+  .price-foot{margin-top:.7rem;font-size:.82rem;color:var(--ink-soft)}
+
+  /* ---------- PERK / 20% OFF ---------- */
+  .perk{background:var(--cream);padding:0 0 96px}
+  .perk-card{
+    background:linear-gradient(135deg,var(--matcha-deep),var(--matcha));color:var(--cream);
+    border-radius:32px;padding:clamp(2.5rem,5vw,3.5rem);
+    display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .perk-card::before{content:"20%";position:absolute;font-family:'Fraunces',serif;font-size:14rem;font-weight:600;opacity:.07;top:-3rem;right:-1rem;line-height:1}
+  .perk-card .eyebrow{color:var(--sage)}
+  .perk-card h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--cream);margin:.5rem 0 .8rem}
+  .perk-card p{color:rgba(246,242,231,.82);max-width:460px}
+  .perk-text{flex:1;min-width:280px;position:relative;z-index:1}
+  .perk-btn{background:var(--cream);color:var(--matcha-deep);white-space:nowrap;position:relative;z-index:1}
+  .perk-btn:hover{background:var(--white)}
+  .perks-list{list-style:none;display:grid;gap:.6rem;margin-top:1.2rem}
+  .perks-list li{color:var(--cream);font-size:1.05rem;font-weight:500}
+
+  /* ---------- DETAILS STRIP ---------- */
+  .details{background:var(--matcha-deep);color:var(--cream)}
+  .details .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2.5rem}
+  .detail .eyebrow{color:var(--sage)}
+  .detail h3{font-size:1.9rem;color:var(--cream);margin-top:.6rem}
+  .detail p{color:rgba(246,242,231,.72);margin-top:.3rem}
+
+  /* ---------- SIGNUP ---------- */
+  .signup{background:var(--cream)}
+  .signup-card{
+    background:linear-gradient(160deg,var(--white),var(--cream-deep));
+    border:1px solid var(--cream-deep);border-radius:32px;
+    padding:clamp(2.5rem,6vw,4.5rem);text-align:center;box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+  }
+  .signup-card::before{content:"🍵";position:absolute;font-size:9rem;opacity:.06;top:-1rem;right:1rem;transform:rotate(12deg)}
+  .signup-card h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:1rem;position:relative}
+  .signup-card p{color:var(--ink-soft);max-width:480px;margin:0 auto 2.2rem;position:relative}
+  form{display:flex;gap:.7rem;max-width:480px;margin:0 auto;position:relative;flex-wrap:wrap}
+  form input[type=email]{
+    flex:1;min-width:220px;padding:1rem 1.3rem;border-radius:100px;border:1.5px solid var(--sage);
+    background:var(--white);font-size:1rem;font-family:inherit;color:var(--ink);outline:none;transition:border .2s;
+  }
+  form input[type=email]:focus{border-color:var(--matcha-deep)}
+  form button{white-space:nowrap}
+  .form-note{font-size:.82rem;color:var(--ink-soft);margin-top:1.1rem;position:relative}
+  .hp{position:absolute;left:-9999px;opacity:0}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(246,242,231,.7);padding:60px 0 40px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start}
+  footer .brand{color:var(--cream)}
+  footer a{color:rgba(246,242,231,.7);transition:color .2s}
+  footer a:hover{color:var(--cream)}
+  .foot-links{display:flex;gap:1.6rem;font-size:.92rem}
+  .foot-bottom{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(246,242,231,.12);font-size:.84rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- am-autodeploy-check-001 -->
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img class="brand-logo" src="wordmark.png" alt="Matcha &amp; Mingle" />
+      <span class="brand-tag">Wellness · Art · Music · Connection</span>
+    </a>
+    <div class="nav-links">
+      <a href="#experience">The Experience</a>
+      <a href="#details">Details</a>
+      <a href="#signup">Updates</a>
+      <a href="#signup" class="btn nav-cta">Join the list</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="blob a"></div>
+  <div class="blob b"></div>
+  <div class="wrap">
+    <div class="hero-badge"><span class="dot"></span> First gathering · August 1, 2026</div>
+    <h1>Sip, breathe,<br><em>mingle.</em></h1>
+    <p class="lede">A three-hour wellness gathering in Wynwood, Miami — matcha, movement, tastings, and live DJ sets. Come for the calm, stay for the connection.</p>
+    <form class="hero-form" name="updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success.html">
+      <input type="hidden" name="form-name" value="updates" />
+      <p class="hp"><label>Don't fill this out: <input name="bot-field" /></label></p>
+      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" />
+      <button type="submit" class="btn big">Get on the list</button>
+    </form>
+    <div class="hero-cta"><a href="#tickets" class="btn big">🎟️ Get tickets — $30</a></div>
+    <a href="#experience" class="hero-link">See what's inside ↓</a>
+    <div class="presented">
+      Presented by <span class="plusone-mark">Plus 1 Social App</span>
+      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn download" target="_blank" rel="noopener">Download here ↓</a>
+    </div>
+  </div>
+</header>
+
+<section class="experience" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Experience</span>
+      <h2>Wellness, but make it social.</h2>
+      <p>Every gathering blends restorative moments with playful energy. Here's a taste of what to expect on the floor.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ico">🏃</div>
+        <h3>Movement Classes</h3>
+        <p>Sweat through a HIIT class, then ground down with Mat Pilates. Every class is included with your ticket.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🍵</div>
+        <h3>Matcha &amp; Tastings</h3>
+        <p>An open matcha bar from 12–1pm by Honey Veil, plus complimentary tequila tastings throughout the event.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🎧</div>
+        <h3>Live DJ Sets</h3>
+        <p>Live sets from DJ Scholar and DJ Joc Havana keeping the energy high from open to close.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🎨</div>
+        <h3>Art &amp; Community</h3>
+        <p>Local art, good people, and the kind of connection that makes a wellness day feel like a celebration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="partners" id="partners">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Activations &amp; Partners</span>
+      <h2>Powered by brands we love.</h2>
+      <p>Most activations take place on the indoor soccer field, so you stay cool and comfortable the whole time.</p>
+    </div>
+    <div class="cards">
+      <a class="card reveal" href="https://www.tesla.com/findus/location/store/coralgables" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-tesla.png" alt="Tesla" /></div>
+        <p class="partner-name">Tesla</p>
+        <p>Book a test drive on site and experience the future of electric.</p>
+      </a>
+      <a class="card reveal" href="https://offers.pausestudio.com/studio/BRKL/" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#162244"><img src="logo-pause.png" alt="Pause Wellness Center" /></div>
+        <p class="partner-name">Pause Wellness Center</p>
+        <p>Cold plunge into an ice bath and reset at the recovery station.</p>
+      </a>
+      <a class="card reveal" href="https://jetsetpilates.com/" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#1d254a"><img src="logo-jetset.png" alt="Jetset Modern Pilates" /></div>
+        <p class="partner-name">Jetset Pilates</p>
+        <p>A 45-minute mat Pilates class to lengthen, strengthen, and flow.</p>
+      </a>
+      <a class="card reveal" href="https://incredibleasyou.com" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-iay.png" alt="Incredible As You" /></div>
+        <p class="partner-name">Incredible As You</p>
+        <p>Activewear that moves with you, from the IAY collection.</p>
+      </a>
+      <a class="card reveal" href="https://reckn.us/" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#07080d"><img src="logo-reckn.png" alt="Reck'N" /></div>
+        <p class="partner-name">Reck'N</p>
+        <p>Curated tequila tastings to sip and savor, powered by the Reck'N app.</p>
+      </a>
+      <a class="card reveal" href="https://thechicwelln7967.janewebsites.com" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-chic.png" alt="The Chic Beauty &amp; Wellness" /></div>
+        <p class="partner-name">The Chic Beauty &amp; Wellness</p>
+        <p>Free B12 shots to boost your energy and keep you glowing.</p>
+      </a>
+      <a class="card reveal" href="https://www.koolkingcoconut.com/" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#141414"><img src="logo-kool.png" alt="Kool King Coconut" /></div>
+        <p class="partner-name">Kool King Coconut</p>
+        <p>Premium coconut water to keep you hydrated and refreshed all event.</p>
+      </a>
+      <a class="card reveal" href="https://edgehydrate.com/" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-edge.png" alt="Edge Hydration" /></div>
+        <p class="partner-name">Edge Hydration</p>
+        <p>Electrolyte hydration to power you through every class.</p>
+      </a>
+      <a class="card reveal" href="https://www.clubstudiofitness.com/Pages/freepass.aspx?CorporateId=8ff60a45-bafa-4045-b7c4-cbb1fb473ebd" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-club.png" alt="Club Studio" /></div>
+        <p class="partner-name">Club Studio</p>
+        <p>Rebound — a trampoline cardio class from 1:30–2pm. 20 trampolines, first come, first served.</p>
+      </a>
+      <a class="card reveal" href="https://link.me" target="_blank" rel="noopener">
+        <div class="logo-tile" style="background:#141414"><img src="logo-linkme.png" alt="Link.me" /></div>
+        <p class="partner-name">Link.me</p>
+        <p>Share your socials and connect instantly — the easiest way to mingle.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="tickets" id="tickets">
+  <div class="wrap">
+    <div class="tickets-card reveal">
+      <div class="tickets-info">
+        <span class="eyebrow">Tickets</span>
+        <h2>One ticket. Everything included.</h2>
+        <ul class="includes">
+          <li>Open matcha bar (12–1pm) by Honey Veil</li>
+          <li>Access to every class — HIIT &amp; Mat Pilates</li>
+          <li>Free tequila tastings</li>
+          <li>Live sets from DJ Scholar &amp; DJ Joc Havana</li>
+        </ul>
+        <p class="venue-note">📍 <a href="https://maps.google.com/?q=Arena+Wynwood+Sports+Complex,+1089+NW+20th+St,+Miami,+FL+33127" target="_blank" rel="noopener" class="venue-link">Arena Wynwood Sports Complex · 1089 NW 20th St, Miami, FL 33127</a></p>
+      </div>
+      <div class="tickets-price">
+        <div class="price"><span class="cur">$</span>30</div>
+        <p class="price-sub">All-inclusive · Aug 1 · 11am–2pm</p>
+        <a href="https://www.eventbrite.com/e/matcha-and-mingle-wellness-event-tickets-1992294196573?aff=oddtdtcreator&amp;keep_tld=true" class="btn big ticket-btn" target="_blank" rel="noopener">Get tickets on Eventbrite</a>
+        <a href="https://events.sweatpals.com/eadbf135" class="btn big ticket-btn ghost-ticket" target="_blank" rel="noopener">Get tickets on SweatPals</a>
+        <p class="price-foot">20% off with the Plus 1 app</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="perk" id="perk">
+  <div class="wrap">
+    <div class="perk-card reveal">
+      <div class="perk-text">
+        <span class="eyebrow">Plus 1 members</span>
+        <h2>Create a profile, unlock more.</h2>
+        <p>Set up a profile on the Plus 1 Social App and every Matcha &amp; Mingle event gets better:</p>
+        <ul class="perks-list">
+          <li>💸 20% off your tickets</li>
+          <li>⏰ Early access before tickets open to everyone</li>
+          <li>✨ VIP entry at the door</li>
+        </ul>
+      </div>
+      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big perk-btn" target="_blank" rel="noopener">Get the Plus 1 app ↓</a>
+    </div>
+  </div>
+</section>
+
+<section class="details" id="details">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:2.5rem">
+      <span class="eyebrow" style="color:var(--sage)">The Details</span>
+      <h2 style="color:var(--cream)">Mark the moment.</h2>
+    </div>
+    <div class="grid">
+      <div class="detail reveal">
+        <span class="eyebrow">When</span>
+        <h3>August 1</h3>
+        <p>2026 · 11am–2pm</p>
+      </div>
+      <div class="detail reveal">
+        <span class="eyebrow">Where</span>
+        <img class="venue-logo" src="logo-arena.png" alt="Arena Wynwood" />
+        <p>1089 NW 20th St, Miami FL 33127</p>
+      </div>
+      <div class="detail reveal">
+        <span class="eyebrow">Tickets</span>
+        <h3>$30</h3>
+        <p>On Eventbrite &amp; SweatPals</p>
+      </div>
+      <div class="detail reveal">
+        <span class="eyebrow">Who</span>
+        <h3>You + a Plus One</h3>
+        <p>Bring the friend who needs the reset</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="signup" id="signup">
+  <div class="wrap">
+    <div class="signup-card reveal">
+      <span class="eyebrow">Stay in the loop</span>
+      <h2>Be the first to know.</h2>
+      <p>Drop your email and we'll send you the date, location, and early access the moment tickets open. No spam, just the good stuff.</p>
+
+      <!-- Netlify Forms: handled automatically on deploy. Submissions appear in your Netlify dashboard under Forms. -->
+      <form name="updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success.html">
+        <input type="hidden" name="form-name" value="updates" />
+        <p class="hp"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" />
+        <button type="submit" class="btn big">Notify me</button>
+      </form>
+      <p class="form-note">By signing up you agree to receive occasional updates about Matcha &amp; Mingle.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top">
+        <img class="brand-logo brand-logo--light" src="wordmark-light.png" alt="Matcha &amp; Mingle" />
+        <span class="brand-tag brand-tag--light">Wellness · Art · Music · Connection</span>
+      </a>
+      <p style="margin-top:1rem;max-width:320px;font-size:.92rem">A wellness gathering presented by the Plus 1 Social App. Sip, breathe, mingle.</p>
+      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn download" target="_blank" rel="noopener" style="margin-top:1rem">Download Plus 1 ↓</a>
+    </div>
+    <div class="foot-links">
+      <a href="#experience">Experience</a>
+      <a href="#details">Details</a>
+      <a href="#signup">Updates</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Matcha &amp; Mingle · Presented by the Plus 1 Social App</span>
+    <span>matchaandmingle.com</span>
+  </div>
+</footer>
+
+<script>
+  // Nav background on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

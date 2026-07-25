@@ -1,0 +1,13 @@
+# Netlify configuration for Matcha & Mingle
+# A static site — no build step needed. Netlify serves the folder as-is.
+
+[build]
+  publish = "."
+
+# Nice security + caching defaults
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
