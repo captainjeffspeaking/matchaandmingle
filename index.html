@@ -4,22 +4,22 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Matcha &amp; Mingle · Wellness, Reimagined</title>
-<meta name="description" content="Matcha & Mingle is a modern wellness event series: wellness activations, art exhibits, healthy tastings, and live DJ sets. Presented by the Plus 1 Social App. August 1, 2026 at Arena Wynwood, Miami. Join the list." />
+<meta name="description" content="Matcha & Mingle is a modern wellness event series: wellness activations, art exhibits, healthy tastings, and live DJ sets. Presented by the Plus 1 Social App. Round two lands late September 2026 — join the list. Join the list." />
 <link rel="canonical" href="https://matchaandmingle.com/" />
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Matcha & Mingle · Wellness, Reimagined" />
-<meta property="og:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. August 1, 2026 at Arena Wynwood, Miami." />
+<meta property="og:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. Round two lands late September 2026 — join the list." />
 <meta property="og:url" content="https://matchaandmingle.com/" />
 <meta property="og:image" content="https://matchaandmingle.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/png" />
-<meta property="og:image:alt" content="Matcha & Mingle · Sip, breathe, mingle. August 1, 2026 · Arena Wynwood, Miami." />
+<meta property="og:image:alt" content="Matcha & Mingle · Sip, breathe, mingle. Round two · Late September 2026." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Matcha & Mingle · Wellness, Reimagined" />
-<meta name="twitter:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. August 1, 2026 at Arena Wynwood, Miami." />
+<meta name="twitter:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. Round two lands late September 2026 — join the list." />
 <meta name="twitter:image" content="https://matchaandmingle.com/og-image.png" />
 
 <!-- Logo favicon -->
@@ -154,6 +154,27 @@
   .card h3{font-size:1.3rem;margin-bottom:.5rem;color:var(--matcha-deep)}
   .card p{color:var(--ink-soft);font-size:.96rem}
 
+  /* ---------- THANK YOU ---------- */
+  .thankyou{background:var(--white)}
+  .thankyou-card{
+    background:linear-gradient(160deg,var(--cream),var(--cream-deep));
+    border-radius:32px;padding:clamp(2.5rem,6vw,4rem);text-align:center;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .thankyou-card::before{content:"🍵";position:absolute;font-size:11rem;opacity:.06;top:-1.5rem;right:1rem;transform:rotate(12deg)}
+  .thankyou-card h2{font-size:clamp(1.9rem,5vw,3rem);color:var(--matcha-deep);margin:.6rem 0 1.1rem;position:relative}
+  .thankyou-card p{color:var(--ink-soft);max-width:620px;margin:0 auto;font-size:1.08rem;position:relative}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{background:var(--cream)}
+  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+  .gallery-grid img{
+    width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;display:block;
+    box-shadow:var(--shadow);transition:transform .3s ease;
+  }
+  .gallery-grid a{display:block;overflow:hidden;border-radius:16px}
+  .gallery-grid a:hover img{transform:scale(1.04)}
+
   /* ---------- PARTNERS ---------- */
   .partners{background:var(--cream)}
   .partners .card{background:var(--white)}
@@ -264,8 +285,8 @@
       <span class="brand-tag">Wellness · Art · Music · Connection</span>
     </a>
     <div class="nav-links">
+      <a href="#gallery">Recap</a>
       <a href="#experience">The Experience</a>
-      <a href="#details">Details</a>
       <a href="#signup">Updates</a>
       <a href="#signup" class="btn nav-cta">Join the list</a>
     </div>
@@ -276,16 +297,16 @@
   <div class="blob a"></div>
   <div class="blob b"></div>
   <div class="wrap">
-    <div class="hero-badge"><span class="dot"></span> First gathering · August 1, 2026</div>
+    <div class="hero-badge"><span class="dot"></span> We're back · Round two, late September 2026</div>
     <h1>Sip, breathe,<br><em>mingle.</em></h1>
-    <p class="lede">A three-hour wellness gathering in Wynwood, Miami — matcha, movement, tastings, and live DJ sets. Come for the calm, stay for the connection.</p>
+    <p class="lede">Thank you, Miami — our first gathering on August 1 was everything we hoped for. Round two lands late September. Get on the list for first access.</p>
     <form class="hero-form" name="updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success.html">
       <input type="hidden" name="form-name" value="updates" />
       <p class="hp"><label>Don't fill this out: <input name="bot-field" /></label></p>
       <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" />
       <button type="submit" class="btn big">Get on the list</button>
     </form>
-    <div class="hero-cta"><a href="#tickets" class="btn big">🎟️ Get tickets — $30</a></div>
+    <div class="hero-cta"><a href="#gallery" class="btn big">📸 See the recap ↓</a></div>
     <a href="#experience" class="hero-link">See what's inside ↓</a>
     <div class="presented">
       Presented by <span class="plusone-mark">Plus 1 Social App</span>
@@ -293,6 +314,57 @@
     </div>
   </div>
 </header>
+
+<section class="thankyou" id="thankyou">
+  <div class="wrap">
+    <div class="thankyou-card reveal">
+      <span class="eyebrow">Thank you, Miami</span>
+      <h2>Our first Matcha &amp; Mingle was one for the books.</h2>
+      <p>On August 1 you showed up, sipped, stretched, and mingled with us at Arena Wynwood — and it was everything we hoped for and more. Huge thank you to everyone who came out, and to our incredible partners who made it happen. This is just the beginning: round two lands late September. 🍵</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Recap</span>
+      <h2>Moments from August 1.</h2>
+      <p>A look back at our first gathering at Arena Wynwood.</p>
+    </div>
+    <div class="gallery-grid">
+      <a href="gallery/g01.jpg" target="_blank" rel="noopener"><img src="gallery/g01.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g02.jpg" target="_blank" rel="noopener"><img src="gallery/g02.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g03.jpg" target="_blank" rel="noopener"><img src="gallery/g03.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g04.jpg" target="_blank" rel="noopener"><img src="gallery/g04.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g05.jpg" target="_blank" rel="noopener"><img src="gallery/g05.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g06.jpg" target="_blank" rel="noopener"><img src="gallery/g06.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g07.jpg" target="_blank" rel="noopener"><img src="gallery/g07.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g08.jpg" target="_blank" rel="noopener"><img src="gallery/g08.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g09.jpg" target="_blank" rel="noopener"><img src="gallery/g09.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g10.jpg" target="_blank" rel="noopener"><img src="gallery/g10.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g11.jpg" target="_blank" rel="noopener"><img src="gallery/g11.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g12.jpg" target="_blank" rel="noopener"><img src="gallery/g12.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g13.jpg" target="_blank" rel="noopener"><img src="gallery/g13.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g14.jpg" target="_blank" rel="noopener"><img src="gallery/g14.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g15.jpg" target="_blank" rel="noopener"><img src="gallery/g15.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g16.jpg" target="_blank" rel="noopener"><img src="gallery/g16.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g17.jpg" target="_blank" rel="noopener"><img src="gallery/g17.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g18.jpg" target="_blank" rel="noopener"><img src="gallery/g18.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g19.jpg" target="_blank" rel="noopener"><img src="gallery/g19.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g20.jpg" target="_blank" rel="noopener"><img src="gallery/g20.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g21.jpg" target="_blank" rel="noopener"><img src="gallery/g21.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g22.jpg" target="_blank" rel="noopener"><img src="gallery/g22.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g23.jpg" target="_blank" rel="noopener"><img src="gallery/g23.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g24.jpg" target="_blank" rel="noopener"><img src="gallery/g24.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g25.jpg" target="_blank" rel="noopener"><img src="gallery/g25.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g26.jpg" target="_blank" rel="noopener"><img src="gallery/g26.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g27.jpg" target="_blank" rel="noopener"><img src="gallery/g27.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g28.jpg" target="_blank" rel="noopener"><img src="gallery/g28.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+      <a href="gallery/g29.jpg" target="_blank" rel="noopener"><img src="gallery/g29.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
+    </div>
+  </div>
+</section>
 
 <section class="experience" id="experience">
   <div class="wrap">
@@ -392,22 +464,22 @@
   <div class="wrap">
     <div class="tickets-card reveal">
       <div class="tickets-info">
-        <span class="eyebrow">Tickets</span>
-        <h2>One ticket. Everything included.</h2>
+        <span class="eyebrow">Round Two</span>
+        <h2>The next one drops late September.</h2>
+        <p style="color:var(--ink-soft);margin:.4rem 0 1.3rem">If round one was any hint, you won't want to miss it. Here's the kind of thing to expect:</p>
         <ul class="includes">
-          <li>Open matcha bar (12–1pm) by Honey Veil</li>
-          <li>Access to every class — HIIT &amp; Mat Pilates</li>
-          <li>Free tequila tastings</li>
-          <li>Live sets from DJ Scholar &amp; DJ Joc Havana</li>
+          <li>An open matcha bar</li>
+          <li>Movement classes to sweat and stretch</li>
+          <li>Tequila tastings</li>
+          <li>Live DJ sets all afternoon</li>
         </ul>
-        <p class="venue-note">📍 <a href="https://maps.google.com/?q=Arena+Wynwood+Sports+Complex,+1089+NW+20th+St,+Miami,+FL+33127" target="_blank" rel="noopener" class="venue-link">Arena Wynwood Sports Complex · 1089 NW 20th St, Miami, FL 33127</a></p>
+        <p class="venue-note">📍 New venue &amp; date announced soon.</p>
       </div>
       <div class="tickets-price">
-        <div class="price"><span class="cur">$</span>30</div>
-        <p class="price-sub">All-inclusive · Aug 1 · 11am–2pm</p>
-        <a href="https://www.eventbrite.com/e/matcha-and-mingle-wellness-event-tickets-1992294196573?aff=oddtdtcreator&amp;keep_tld=true" class="btn big ticket-btn" target="_blank" rel="noopener">Get tickets on Eventbrite</a>
-        <a href="https://events.sweatpals.com/eadbf135" class="btn big ticket-btn ghost-ticket" target="_blank" rel="noopener">Get tickets on SweatPals</a>
-        <p class="price-foot">20% off with the Plus 1 app</p>
+        <div class="price">Sept</div>
+        <p class="price-sub">Round two · Late September 2026</p>
+        <a href="#signup" class="btn big ticket-btn">Join the list for first access</a>
+        <p class="price-foot">Plus 1 members get early access &amp; 20% off</p>
       </div>
     </div>
   </div>
@@ -440,18 +512,18 @@
     <div class="grid">
       <div class="detail reveal">
         <span class="eyebrow">When</span>
-        <h3>August 1</h3>
-        <p>2026 · 11am–2pm</p>
+        <h3>Late September</h3>
+        <p>2026 · Date announced soon</p>
       </div>
       <div class="detail reveal">
         <span class="eyebrow">Where</span>
-        <img class="venue-logo" src="logo-arena.png" alt="Arena Wynwood" />
-        <p>1089 NW 20th St, Miami FL 33127</p>
+        <h3>Miami</h3>
+        <p>Venue announced soon</p>
       </div>
       <div class="detail reveal">
         <span class="eyebrow">Tickets</span>
-        <h3>$30</h3>
-        <p>On Eventbrite &amp; SweatPals</p>
+        <h3>Drop soon</h3>
+        <p>Join the list for first access</p>
       </div>
       <div class="detail reveal">
         <span class="eyebrow">Who</span>
