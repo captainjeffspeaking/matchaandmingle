@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Matcha &amp; Mingle · Wellness, Reimagined</title>
-<meta name="description" content="Matcha & Mingle is a modern wellness event series: wellness activations, art exhibits, healthy tastings, and live DJ sets. Presented by the Plus 1 Social App. See you September 19, 2026 in Miami. Download Plus 1 for free entry." />
+<meta name="description" content="Matcha & Mingle is a modern wellness event series: wellness activations, art exhibits, healthy tastings, and live DJ sets. Presented by the Plus 1 Social App. 100% free · Sept 19, 2026 · Miami · RSVP on Plus 1. Always 100% free — RSVP on the Plus 1 app or web." />
 <link rel="canonical" href="https://matchaandmingle.com/" />
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Matcha & Mingle · Wellness, Reimagined" />
-<meta property="og:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. See you September 19, 2026 in Miami." />
+<meta property="og:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. 100% free · Sept 19, 2026 · Miami · RSVP on Plus 1." />
 <meta property="og:url" content="https://matchaandmingle.com/" />
 <meta property="og:image" content="https://matchaandmingle.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="Matcha & Mingle · Sip, breathe, mingle. September 19, 2026 · Zoko Collective, Miami." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Matcha & Mingle · Wellness, Reimagined" />
-<meta name="twitter:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. See you September 19, 2026 in Miami." />
+<meta name="twitter:description" content="Wellness activations, art, healthy tastings & live DJ sets. Presented by the Plus 1 Social App. 100% free · Sept 19, 2026 · Miami · RSVP on Plus 1." />
 <meta name="twitter:image" content="https://matchaandmingle.com/og-image.png" />
 
 <!-- Logo favicon -->
@@ -155,6 +155,20 @@
   }
   .card h3{font-size:1.3rem;margin-bottom:.5rem;color:var(--matcha-deep)}
   .card p{color:var(--ink-soft);font-size:.96rem}
+
+  /* ---------- CAUSE ---------- */
+  .cause{background:var(--cream)}
+  .cause-card{
+    background:linear-gradient(135deg,var(--matcha-deep),var(--matcha));color:var(--cream);
+    border-radius:32px;padding:clamp(2.5rem,6vw,4rem);text-align:center;box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+  }
+  .cause-card::before{content:"🤍";position:absolute;font-size:11rem;opacity:.06;top:-1.5rem;right:1rem;transform:rotate(10deg)}
+  .cause-card .eyebrow{color:var(--sage)}
+  .cause-card h2{color:var(--cream);font-size:clamp(1.9rem,5vw,3rem);margin:.5rem 0 1.1rem;position:relative}
+  .cause-card p{color:rgba(246,242,231,.9);max-width:640px;margin:0 auto;font-size:1.08rem;position:relative}
+  .cause-card p strong{color:var(--cream);font-weight:600}
+  .cause-sub{margin-top:1.2rem !important;color:var(--sage) !important;font-style:italic}
 
   /* ---------- THANK YOU ---------- */
   .thankyou{background:var(--white)}
@@ -298,10 +312,10 @@
       <span class="brand-tag">Wellness · Art · Music · Connection</span>
     </a>
     <div class="nav-links">
+      <a href="#cause">Our Cause</a>
       <a href="#gallery">Recap</a>
       <a href="#experience">The Experience</a>
-      <a href="#perk">Free Entry</a>
-      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn nav-cta" target="_blank" rel="noopener">Download Plus 1</a>
+      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn nav-cta" target="_blank" rel="noopener">RSVP on Plus 1</a>
     </div>
   </div>
 </nav>
@@ -310,10 +324,10 @@
   <div class="blob a"></div>
   <div class="blob b"></div>
   <div class="wrap">
-    <div class="hero-badge"><span class="dot"></span> Round two · September 19, 2026 · 11am–2pm</div>
+    <div class="hero-badge"><span class="dot"></span> Round two · September 19, 2026 · 100% free</div>
     <h1>Sip, breathe,<br><em>mingle.</em></h1>
     <p class="lede">We're back, Miami. Join us September 19 at Zoko Collective for matcha, movement, and good company — chill vibes, great workouts, and the easiest way to meet new people.</p>
-    <div class="hero-cta"><a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big hero-download" target="_blank" rel="noopener">📲 Download Plus 1 — Free Entry</a></div>
+    <div class="hero-cta"><a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big hero-download" target="_blank" rel="noopener">📲 RSVP on Plus 1</a></div>
     <div class="hero-sublinks">
       <a href="#gallery" class="hero-link">📸 See the recap</a>
       <a href="#experience" class="hero-link">See what's inside ↓</a>
@@ -323,6 +337,17 @@
     </div>
   </div>
 </header>
+
+<section class="cause" id="cause">
+  <div class="wrap">
+    <div class="cause-card reveal">
+      <span class="eyebrow">Always free · Always for good</span>
+      <h2>Free to attend. For a cause that matters.</h2>
+      <p>Every Matcha &amp; Mingle event is 100% free — we don't sell tickets. Just RSVP on the Plus 1 app or web to reserve your spot. Starting this October, <strong>100% of net proceeds from our sponsors go to organizations that fight human trafficking and help protect and support survivors</strong>, and attendees can donate directly to the cause at the event.</p>
+      <p class="cause-sub">Come move, sip, and connect — and be part of something bigger.</p>
+    </div>
+  </div>
+</section>
 
 <section class="thankyou" id="thankyou">
   <div class="wrap">
@@ -497,7 +522,7 @@
     <div class="tickets-card reveal">
       <div class="tickets-info">
         <span class="eyebrow">What's included</span>
-        <h2>One ticket. The whole vibe.</h2>
+        <h2>Free to attend. Everything included.</h2>
         <ul class="includes">
           <li>Warm-up &amp; stretch, HIIT, and Pilates classes</li>
           <li>Free matcha</li>
@@ -510,8 +535,8 @@
       <div class="tickets-price">
         <div class="price" style="font-size:3.4rem">Sept 19</div>
         <p class="price-sub">11am–2pm · Zoko Collective, Miami</p>
-        <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big ticket-btn" target="_blank" rel="noopener">Download Plus 1 — Free Entry</a>
-        <p class="price-foot">Free entry when you download the Plus 1 app</p>
+        <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big ticket-btn" target="_blank" rel="noopener">RSVP on Plus 1</a>
+        <p class="price-foot">Free to attend — RSVP on the Plus 1 app or web</p>
       </div>
     </div>
   </div>
@@ -521,16 +546,16 @@
   <div class="wrap">
     <div class="perk-card reveal">
       <div class="perk-text">
-        <span class="eyebrow">Free entry</span>
-        <h2>Download Plus 1, get in free.</h2>
-        <p>Download the Plus 1 Social App and your entry to Matcha &amp; Mingle is on us:</p>
+        <span class="eyebrow">How to get in</span>
+        <h2>RSVP on Plus 1.</h2>
+        <p>We don't sell tickets — reserve your free spot on the Plus 1 app or web. That's your access to the event:</p>
         <ul class="perks-list">
-          <li>🎟️ Free entry to the event</li>
+          <li>📲 Free RSVP for entry</li>
           <li>⏰ Early access to future drops</li>
           <li>✨ VIP treatment at the door</li>
         </ul>
       </div>
-      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big perk-btn" target="_blank" rel="noopener">Download Plus 1 — Free Entry ↓</a>
+      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big perk-btn" target="_blank" rel="noopener">RSVP on Plus 1 ↓</a>
     </div>
   </div>
 </section>
@@ -569,11 +594,11 @@
 <section class="signup" id="signup">
   <div class="wrap">
     <div class="signup-card reveal">
-      <span class="eyebrow">Free entry</span>
-      <h2>Get in free with Plus 1.</h2>
-      <p>Download the Plus 1 Social App and your entry to Matcha &amp; Mingle on September 19 is completely free. See you there.</p>
-      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big" target="_blank" rel="noopener" style="display:inline-block;padding:1.15rem 2.6rem;font-size:1.08rem">📲 Download Plus 1 — Free Entry</a>
-      <p class="form-note">Free at the door when you show your Plus 1 app.</p>
+      <span class="eyebrow">How to get in</span>
+      <h2>RSVP on Plus 1.</h2>
+      <p>We don't sell tickets — RSVP on the Plus 1 app or web to reserve your free spot for September 19. See you there.</p>
+      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn big" target="_blank" rel="noopener" style="display:inline-block;padding:1.15rem 2.6rem;font-size:1.08rem">📲 RSVP on Plus 1</a>
+      <p class="form-note">No tickets sold — RSVP on the Plus 1 app or web.</p>
     </div>
   </div>
 </section>
@@ -586,12 +611,12 @@
         <span class="brand-tag brand-tag--light">Wellness · Art · Music · Connection</span>
       </a>
       <p style="margin-top:1rem;max-width:320px;font-size:.92rem">A wellness gathering presented by the Plus 1 Social App. Sip, breathe, mingle.</p>
-      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn download" target="_blank" rel="noopener" style="margin-top:1rem">Download Plus 1 ↓</a>
+      <a href="https://joinplus1.app.link/MBQhfir8A3b" class="btn download" target="_blank" rel="noopener" style="margin-top:1rem">RSVP on Plus 1 ↓</a>
     </div>
     <div class="foot-links">
       <a href="#experience">Experience</a>
       <a href="#details">Details</a>
-      <a href="#perk">Free Entry</a>
+      <a href="#perk">RSVP</a>
     </div>
   </div>
   <div class="wrap foot-bottom">
