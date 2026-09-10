@@ -194,7 +194,11 @@
 
   /* ---------- GALLERY ---------- */
   .gallery{background:var(--cream)}
-  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  @media(max-width:900px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:.55rem}}
+  .gallery-grid.collapsed a:nth-child(n+16){display:none}
+  .gallery-more-wrap{text-align:center;margin-top:2.2rem}
   .gallery-grid img{
     width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;display:block;
     box-shadow:var(--shadow);transition:transform .3s ease;
@@ -386,7 +390,7 @@
       <h2>Moments from August 1.</h2>
       <p>A look back at our first gathering at Arena Wynwood.</p>
     </div>
-    <div class="gallery-grid">
+    <div class="gallery-grid collapsed">
       <a href="gallery/g01.jpg" target="_blank" rel="noopener"><img src="gallery/g01.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
       <a href="gallery/g02.jpg" target="_blank" rel="noopener"><img src="gallery/g02.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
       <a href="gallery/g03.jpg" target="_blank" rel="noopener"><img src="gallery/g03.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
@@ -428,6 +432,7 @@
       <a href="gallery/g39.jpg" target="_blank" rel="noopener"><img src="gallery/g39.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
       <a href="gallery/g40.jpg" target="_blank" rel="noopener"><img src="gallery/g40.jpg" loading="lazy" alt="Matcha &amp; Mingle · August 1, 2026" /></a>
     </div>
+    <div class="gallery-more-wrap"><button type="button" class="btn big" id="galleryMore">See more photos</button></div>
   </div>
 </section>
 
@@ -650,6 +655,16 @@
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.15});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Gallery "see more"
+  const galleryMore = document.getElementById('galleryMore');
+  if (galleryMore) {
+    galleryMore.addEventListener('click', () => {
+      document.querySelector('.gallery-grid').classList.remove('collapsed');
+      const wrap = galleryMore.closest('.gallery-more-wrap');
+      if (wrap) wrap.remove();
+    });
+  }
 </script>
 </body>
 </html>
