@@ -212,6 +212,14 @@
   a.card .partner-name::after{content:" ↗";color:var(--matcha-bright);font-weight:700}
   a.card:hover .partner-name{color:var(--matcha-deep)}
   .venue-logo{height:48px;width:auto;display:block;margin:.5rem 0 .2rem}
+  .past-head{margin-top:5rem;margin-bottom:2rem}
+  .past-title{font-size:clamp(1.3rem,3vw,1.8rem);color:var(--matcha-deep);margin-top:.4rem}
+  .past-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.9rem}
+  .past-item{display:flex;flex-direction:column;align-items:center;gap:.55rem;transition:transform .25s ease}
+  .past-item:hover{transform:translateY(-3px)}
+  .past-logo{width:100%;height:70px;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:12px 14px;overflow:hidden}
+  .past-logo img{max-height:100%;max-width:100%;object-fit:contain;display:block}
+  .past-name{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--ink-soft);text-align:center}
   .hero-cta{margin-bottom:1rem}
   .venue-link{color:inherit;text-decoration:underline;text-underline-offset:2px}
   .venue-link:hover{color:var(--matcha-deep)}
@@ -458,60 +466,15 @@
 <section class="partners" id="partners">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Activations &amp; Partners</span>
+      <span class="eyebrow">September 19 Sponsors</span>
       <h2>Powered by brands we love.</h2>
-      <p>The brands bringing activations, recovery, and giveaways to the floor.</p>
+      <p>The partners bringing samples, activewear, and good energy to this round.</p>
     </div>
     <div class="cards">
-      <a class="card reveal" href="https://www.tesla.com/findus/location/store/coralgables" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-tesla.png" alt="Tesla" /></div>
-        <p class="partner-name">Tesla</p>
-        <p>Book a test drive on site and experience the future of electric.</p>
-      </a>
-      <a class="card reveal" href="https://offers.pausestudio.com/studio/BRKL/" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#162244"><img src="logo-pause.png" alt="Pause Wellness Center" /></div>
-        <p class="partner-name">Pause Wellness Center</p>
-        <p>Cold plunge into an ice bath and reset at the recovery station.</p>
-      </a>
-      <a class="card reveal" href="https://jetsetpilates.com/" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#1d254a"><img src="logo-jetset.png" alt="Jetset Modern Pilates" /></div>
-        <p class="partner-name">Jetset Pilates</p>
-        <p>A 45-minute mat Pilates class to lengthen, strengthen, and flow.</p>
-      </a>
       <a class="card reveal" href="https://incredibleasyou.com" target="_blank" rel="noopener">
         <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-iay.png" alt="Incredible As You" /></div>
         <p class="partner-name">Incredible As You</p>
         <p>Activewear that moves with you, from the IAY collection.</p>
-      </a>
-      <a class="card reveal" href="https://reckn.us/" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#07080d"><img src="logo-reckn.png" alt="Reck'N" /></div>
-        <p class="partner-name">Reck'N</p>
-        <p>Curated tequila tastings to sip and savor, powered by the Reck'N app.</p>
-      </a>
-      <a class="card reveal" href="https://thechicwelln7967.janewebsites.com" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-chic.png" alt="The Chic Beauty &amp; Wellness" /></div>
-        <p class="partner-name">The Chic Beauty &amp; Wellness</p>
-        <p>Free B12 shots to boost your energy and keep you glowing.</p>
-      </a>
-      <a class="card reveal" href="https://www.koolkingcoconut.com/" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#141414"><img src="logo-kool.png" alt="Kool King Coconut" /></div>
-        <p class="partner-name">Kool King Coconut</p>
-        <p>Premium coconut water to keep you hydrated and refreshed all event.</p>
-      </a>
-      <a class="card reveal" href="https://edgehydrate.com/" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-edge.png" alt="Edge Hydration" /></div>
-        <p class="partner-name">Edge Hydration</p>
-        <p>Electrolyte hydration to power you through every class.</p>
-      </a>
-      <a class="card reveal" href="https://www.clubstudiofitness.com/Pages/freepass.aspx?CorporateId=8ff60a45-bafa-4045-b7c4-cbb1fb473ebd" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-club.png" alt="Club Studio" /></div>
-        <p class="partner-name">Club Studio</p>
-        <p>Rebound, a trampoline cardio class from 1:30–2pm. 20 trampolines, first come, first served.</p>
-      </a>
-      <a class="card reveal" href="https://link.me" target="_blank" rel="noopener">
-        <div class="logo-tile" style="background:#141414"><img src="logo-linkme.png" alt="Link.me" /></div>
-        <p class="partner-name">Link.me</p>
-        <p>Share your socials and connect instantly, the easiest way to mingle.</p>
       </a>
       <a class="card reveal" href="https://drinklick.com/" target="_blank" rel="noopener">
         <div class="logo-tile" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-lick.png" alt="Lick Energy" /></div>
@@ -522,6 +485,49 @@
         <div class="logo-tile" style="background:#141414"><img src="logo-hermetica.png" alt="Hermetica Superfoods" /></div>
         <p class="partner-name">Hermetica Superfoods</p>
         <p>Samples of their healthy adaptogenic gummies to try.</p>
+      </a>
+    </div>
+
+    <div class="section-head reveal past-head">
+      <span class="eyebrow">Previous sponsors</span>
+      <h3 class="past-title">The brands who've shown up before.</h3>
+    </div>
+    <div class="past-grid">
+      <a class="past-item reveal" href="https://www.tesla.com/findus/location/store/coralgables" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-tesla.png" alt="Tesla" /></div>
+        <span class="past-name">Tesla</span>
+      </a>
+      <a class="past-item reveal" href="https://offers.pausestudio.com/studio/BRKL/" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#162244"><img src="logo-pause.png" alt="Pause Wellness Center" /></div>
+        <span class="past-name">Pause</span>
+      </a>
+      <a class="past-item reveal" href="https://jetsetpilates.com/" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#1d254a"><img src="logo-jetset.png" alt="Jetset Pilates" /></div>
+        <span class="past-name">Jetset</span>
+      </a>
+      <a class="past-item reveal" href="https://reckn.us/" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#07080d"><img src="logo-reckn.png" alt="Reck'N" /></div>
+        <span class="past-name">Reck'N</span>
+      </a>
+      <a class="past-item reveal" href="https://thechicwelln7967.janewebsites.com" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-chic.png" alt="The Chic Beauty &amp; Wellness" /></div>
+        <span class="past-name">The Chic</span>
+      </a>
+      <a class="past-item reveal" href="https://www.koolkingcoconut.com/" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#141414"><img src="logo-kool.png" alt="Kool King Coconut" /></div>
+        <span class="past-name">Kool King</span>
+      </a>
+      <a class="past-item reveal" href="https://edgehydrate.com/" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-edge.png" alt="Edge Hydration" /></div>
+        <span class="past-name">Edge</span>
+      </a>
+      <a class="past-item reveal" href="https://www.clubstudiofitness.com/Pages/freepass.aspx?CorporateId=8ff60a45-bafa-4045-b7c4-cbb1fb473ebd" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#ffffff;border:1px solid var(--cream-deep)"><img src="logo-club.png" alt="Club Studio" /></div>
+        <span class="past-name">Club Studio</span>
+      </a>
+      <a class="past-item reveal" href="https://link.me" target="_blank" rel="noopener">
+        <div class="past-logo" style="background:#141414"><img src="logo-linkme.png" alt="Link.me" /></div>
+        <span class="past-name">Link.me</span>
       </a>
     </div>
   </div>
